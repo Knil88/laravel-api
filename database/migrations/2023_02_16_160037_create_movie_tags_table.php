@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('movie_tag', function (Blueprint $table) {
-            
-            $table -> id();            
+        Schema::create('movie_tags', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('movie_tag');
+        Schema::dropIfExists('movie_tags');
     }
 };
